@@ -66,7 +66,11 @@
 
 
         {{-- ================= PASIEN ================= --}}
-        @if(request()->is('pasien*'))
+        <a href="{{ route('pasien.index') }}"
+   class="{{ $baseLink }} {{ request()->routeIs('pasien.*') ? $active : $inactive }}">
+    <i class="fas fa-bed-pulse w-4 text-center"></i>
+    Manajemen Pasien
+</a>
 
         <p class="text-xs uppercase tracking-widest text-indigo-400 px-3 mb-3 mt-6">
             Menu Pasien
@@ -82,11 +86,15 @@
 
 
         </div>
-        @endif
+    
 
 
         {{-- ================= DOKTER ================= --}}
-        @if(request()->is('dokter*'))
+        <a href="{{ route('dokter.index') }}"
+   class="{{ $baseLink }} {{ request()->routeIs('dokter.*') ? $active : $inactive }}">
+    <i class="fas fa-user-doctor w-4 text-center"></i>
+    Manajemen Dokter
+</a>
 
         <p class="text-xs uppercase tracking-widest text-indigo-400 px-3 mb-3 mt-6">
             Menu Dokter
@@ -101,7 +109,7 @@
             </a>
 
         </div>
-        @endif
+        
 
     </div>
 
