@@ -40,7 +40,9 @@
         $active = "bg-gradient-to-r from-white/20 to-white/5 text-white font-semibold border border-indigo-400 border-2";
         @endphp
 
-
+<p class="text-xs font-bold uppercase tracking-widest text-indigo-400 px-3 mb-3">
+            Menu Admin
+        </p>
         {{-- ================= ADMIN ================= --}}
         @if(request()->is('admin*'))
         <a href="{{ route('polis.index') }}"
@@ -49,9 +51,8 @@
     Manajemen Poli
 </a>
 
-        <p class="text-xs font-bold uppercase tracking-widest text-indigo-400 px-3 mb-3">
-            Menu Admin
-        </p>
+
+        
 
         <div class="space-y-1">
 
@@ -72,17 +73,11 @@
     Manajemen Pasien
 </a>
 
-        <p class="text-xs uppercase tracking-widest text-indigo-400 px-3 mb-3 mt-6">
-            Menu Pasien
-        </p>
+        
 
         <div class="space-y-1">
 
-            <a href="{{ route('pasien.dashboard') }}"
-                class="{{ $baseLink }} {{ request()->routeIs('pasien.dashboard') ? $active : $inactive }}">
-                <i class="fas fa-house-medical w-4 text-center"></i>
-                Dashboard Pasien
-            </a>
+           
 
 
         </div>
@@ -96,17 +91,14 @@
     Manajemen Dokter
 </a>
 
-        <p class="text-xs uppercase tracking-widest text-indigo-400 px-3 mb-3 mt-6">
-            Menu Dokter
-        </p>
+<a href="{{ route('obat.index') }}"
+    class="{{ $baseLink }} {{ request()->routeIs('obat.*') ? $active : $inactive }}">
+    <i class="fas fa-pills w-4 text-center"></i>
+    Manajemen Obat
+</a>
 
+        
         <div class="space-y-1">
-
-            <a href="{{ route('dokter.dashboard') }}"
-                class="{{ $baseLink }} {{ request()->routeIs('dokter.dashboard') ? $active : $inactive }}">
-                <i class="fas fa-stethoscope w-4 text-center"></i>
-                Dashboard Dokter
-            </a>
 
         </div>
         
