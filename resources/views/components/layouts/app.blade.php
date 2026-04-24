@@ -18,9 +18,9 @@
     <div class="app-wrapper">
 
         {{-- SIDEBAR --}}
-        <div id="appSidebar" class="sidebar-fixed">
-            @include('components.partials.sidebar')
-        </div>
+<div id="appSidebar" class="sidebar-fixed">
+    @include('partials.sidebar')
+</div>
 
         {{-- OVERLAY --}}
         <div class="sidebar-overlay" id="sidebarOverlay" onclick="toggleSidebar()"></div>
@@ -28,7 +28,7 @@
         {{-- MAIN --}}
         <div class="main-content">
 
-            @include('components.partials.header')
+            @include('partials.header')
 
             <div class="main-scroll">
 
@@ -50,7 +50,7 @@
 
             </div>
 
-            @include('components.partials.footer')
+            @include('partials.footer')
 
         </div>
 
